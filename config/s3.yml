@@ -1,0 +1,9 @@
+staging:
+  aws_access_key: AKIAITG2SR56IMRCWK3A
+  aws_secret_access_key: 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
+  bucket_base_name: production.ashotland.com
+
+production:
+  aws_access_key: AKIAITG2SR56IMRCWK3A
+  aws_secret_access_key: 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
+  bucket_base_name: production.ashotland.com

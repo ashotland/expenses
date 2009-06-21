@@ -1,0 +1,32 @@
+<p>
+  <b>Name:</b>
+  <%=h @event.name %>
+</p>
+
+<p>
+  <b>Budget:</b>
+  <%=h @event.budget %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
+
+<h3>Itemized Expenses</h3>
+
+<div id="expenses">
+  <%= render :partial => 'expenses',
+             :locals  => {:expenses => @event.expenses, 
+                          :event    => @event} %>
+</div>
+
+<h3>Add an expense to this event</h3>
+
+<p style="color: red"><%= flash[:error] %></p>
+
+<% remote_form_for [@event, @expense] do |f| -%>
+  <p>
+    <%= f.collection_select :vendor_id, @vendors, :id, :name %>
+    in the amount of $<%= f.text_field :amount, :size => 9 %>
+  </p>
+  <%= f.submit 'Add this expense' %>
+<% end -%>

@@ -1,0 +1,171 @@
+
+
+Processing EventsController#show (for 127.0.0.1 at 2009-06-19 22:53:18) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::StatementInvalid (Could not find table 'events'):
+  app/controllers/events_controller.rb:16:in `show'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EventsController#show (for 127.0.0.1 at 2009-06-19 22:55:03) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::StatementInvalid (Could not find table 'events'):
+  app/controllers/events_controller.rb:16:in `show'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EventsController#show (for 127.0.0.1 at 2009-06-19 22:56:00) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::StatementInvalid (Could not find table 'events'):
+  app/controllers/events_controller.rb:16:in `show'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EventsController#show (for 127.0.0.1 at 2009-06-19 23:19:45) [GET]
+  Parameters: {"id"=>"2"}
+
+ActiveRecord::RecordNotFound (Couldn't find Event with ID=2):
+  app/controllers/events_controller.rb:16:in `show'
+
+Rendering rescues/layout (not_found)
+
+
+Processing EventsController#index (for 127.0.0.1 at 2009-06-19 23:19:56) [GET]
+Rendering template within layouts/events
+Rendering events/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/events/]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2009-06-19 23:21:07) [GET]
+Rendering template within layouts/events
+Rendering events/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2009-06-19 23:21:07) [GET]
+Rendering template within layouts/events
+Rendering events/new
+Completed in 51ms (View: 50, DB: 0) | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#create (for 127.0.0.1 at 2009-06-19 23:21:16) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"6OLVwy68pY0ag/Q3vwqIHqoZfGJzycH1OIxYByzXnbg=", "event"=>{"name"=>"E1", "budget"=>"100"}}
+Redirected to http://localhost:3000/events/1
+Completed in 39ms (DB: 0) | 302 Found [http://localhost/events]
+
+
+Processing EventsController#show (for 127.0.0.1 at 2009-06-19 23:21:16) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/events
+Rendering events/show
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://localhost/events/1]
+
+
+Processing VendorsController#index (for 127.0.0.1 at 2009-06-19 23:21:23) [GET]
+Rendering template within layouts/vendors
+Rendering vendors/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/vendors]
+
+
+Processing VendorsController#new (for 127.0.0.1 at 2009-06-19 23:21:26) [GET]
+Rendering template within layouts/vendors
+Rendering vendors/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/vendors/new]
+
+
+Processing VendorsController#create (for 127.0.0.1 at 2009-06-19 23:21:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"6OLVwy68pY0ag/Q3vwqIHqoZfGJzycH1OIxYByzXnbg=", "vendor"=>{"name"=>"V1", "email"=>"v1@v1.com"}}
+Redirected to http://localhost:3000/vendors/1
+Completed in 6ms (DB: 1) | 302 Found [http://localhost/vendors]
+
+
+Processing VendorsController#show (for 127.0.0.1 at 2009-06-19 23:21:36) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/vendors
+Rendering vendors/show
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/vendors/1]
+
+
+Processing VendorsController#index (for 127.0.0.1 at 2009-06-19 23:21:41) [GET]
+Rendering template within layouts/vendors
+Rendering vendors/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/vendors]
+
+
+Processing EventsController#index (for 127.0.0.1 at 2009-06-19 23:21:48) [GET]
+Rendering template within layouts/events
+Rendering events/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/events]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2009-06-19 23:21:57) [GET]
+Rendering template within layouts/events
+Rendering events/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#index (for 127.0.0.1 at 2009-06-19 23:21:59) [GET]
+Rendering template within layouts/events
+Rendering events/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/events]
+
+
+Processing EventsController#show (for 127.0.0.1 at 2009-06-19 23:22:02) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/events
+Rendering events/show
+Completed in 8ms (View: 5, DB: 2) | 200 OK [http://localhost/events/1]
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2009-06-19 23:22:09) [POST]
+  Parameters: {"event_id"=>"1", "commit"=>"Add this expense", "expense"=>{"vendor_id"=>"1", "amount"=>"1"}, "authenticity_token"=>"6OLVwy68pY0ag/Q3vwqIHqoZfGJzycH1OIxYByzXnbg="}
+Rendering expenses/create
+Completed in 25ms (View: 3, DB: 2) | 200 OK [http://localhost/events/1/expenses]
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2009-06-19 23:22:12) [POST]
+  Parameters: {"event_id"=>"1", "commit"=>"Add this expense", "expense"=>{"vendor_id"=>"1", "amount"=>"2"}, "authenticity_token"=>"6OLVwy68pY0ag/Q3vwqIHqoZfGJzycH1OIxYByzXnbg="}
+Rendering expenses/create
+Completed in 12ms (View: 4, DB: 2) | 200 OK [http://localhost/events/1/expenses]
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2009-06-19 23:22:14) [POST]
+  Parameters: {"event_id"=>"1", "commit"=>"Add this expense", "expense"=>{"vendor_id"=>"1", "amount"=>"4"}, "authenticity_token"=>"6OLVwy68pY0ag/Q3vwqIHqoZfGJzycH1OIxYByzXnbg="}
+Rendering expenses/create
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/events/1/expenses]
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2009-06-19 23:22:16) [POST]
+  Parameters: {"event_id"=>"1", "commit"=>"Add this expense", "expense"=>{"vendor_id"=>"1", "amount"=>"8"}, "authenticity_token"=>"6OLVwy68pY0ag/Q3vwqIHqoZfGJzycH1OIxYByzXnbg="}
+Rendering expenses/create
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/events/1/expenses]
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2009-06-19 23:22:19) [POST]
+  Parameters: {"event_id"=>"1", "commit"=>"Add this expense", "expense"=>{"vendor_id"=>"1", "amount"=>"16"}, "authenticity_token"=>"6OLVwy68pY0ag/Q3vwqIHqoZfGJzycH1OIxYByzXnbg="}
+Rendering expenses/create
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://localhost/events/1/expenses]
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2009-06-19 23:22:22) [POST]
+  Parameters: {"event_id"=>"1", "commit"=>"Add this expense", "expense"=>{"vendor_id"=>"1", "amount"=>"32"}, "authenticity_token"=>"6OLVwy68pY0ag/Q3vwqIHqoZfGJzycH1OIxYByzXnbg="}
+Rendering expenses/create
+Completed in 18ms (View: 8, DB: 2) | 200 OK [http://localhost/events/1/expenses]
+
+
+Processing ExpensesController#create (for 127.0.0.1 at 2009-06-19 23:22:25) [POST]
+  Parameters: {"event_id"=>"1", "commit"=>"Add this expense", "expense"=>{"vendor_id"=>"1", "amount"=>"64"}, "authenticity_token"=>"6OLVwy68pY0ag/Q3vwqIHqoZfGJzycH1OIxYByzXnbg="}
+Rendering expenses/create
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/events/1/expenses]
+
+
+Processing ExpensesController#destroy (for 127.0.0.1 at 2009-06-19 23:22:33) [DELETE]
+  Parameters: {"event_id"=>"1", "authenticity_token"=>"6OLVwy68pY0ag/Q3vwqIHqoZfGJzycH1OIxYByzXnbg=", "id"=>"6"}
+Rendering expenses/destroy
+Completed in 23ms (View: 12, DB: 2) | 200 OK [http://localhost/events/1/expenses/6]

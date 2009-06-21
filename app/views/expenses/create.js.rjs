@@ -1,0 +1,5 @@
+page[:expenses].replace_html :partial => 'events/expenses', 
+                             :locals  => {:expenses => @event.expenses,
+                                          :event    => @event}
+page[@expense].highlight
+page[:total].highlight
