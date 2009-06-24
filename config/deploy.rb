@@ -3,7 +3,7 @@
 
 set :application, "expenses"
 
-set :repository, "git@github.com:ashotland/Experimental.git/expenses"
+set :repository, "git@github.com:ashotland/expenses.git"
 set :scm, :git
 set :scm_username, "git"
 set :runner, "git"
@@ -11,7 +11,6 @@ set :use_sudo, false
 set :branch, "master"
 set :deploy_via, :checkout
 set :git_shallow_clone, 1
-set :deploy_to, "/home/ashotland/apps/Experimental"
 default_run_options[:pty] = true
 
 # NOTE: for some reason Capistrano requires you to have both the public and
@@ -22,10 +21,10 @@ ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/id_rsa-ec2-rails-keypair"]
 # Your EC2 instances. Use the ec2-xxx....amazonaws.com hostname, not
 # any other name (in case you have your own DNS alias) or it won't
 # be able to resolve to the internal IP address.
-role :web,      "ec2-174-129-103-243.compute-1.amazonaws.com"
-role :app,      "ec2-174-129-103-243.compute-1.amazonaws.com"
-role :memcache, "ec2-174-129-103-243.compute-1.amazonaws.com"
-role :db,       "ec2-174-129-103-243.compute-1.amazonaws.com", :primary => true
+role :web,      "ec2-174-129-118-88.compute-1.amazonaws.com"
+role :app,      "ec2-174-129-118-88.compute-1.amazonaws.com"
+role :memcache, "ec2-174-129-118-88.compute-1.amazonaws.com"
+role :db,       "ec2-174-129-118-88.compute-1.amazonaws.com", :primary => true
 # role :db,       "ec2-56-xx-xx-xx.z-1.compute-1.amazonaws.com", :primary => true, :ebs_vol_id => 'vol-12345abc'
 # optinally, you can specify Amazon's EBS volume ID if the database is persisted 
 # via Amazon's EBS.  See the main README for more information.
@@ -68,7 +67,7 @@ set :ec2onrails_config, {
   # If you don't want to install extra rubygems then remove this
   # NOTE: if you are using rails 2.1, ec2onrails calls 'sudo rake gem:install',
   # which will install gems defined in your rails configuration
-  :rubygems => ["rmagick", "rfacebook -v 0.9.7"],
+  :rubygems => ["rmagick -v 2.9.2", "rfacebook -v 0.9.7"],
   
   # extra security measures are taken if this is true, BUT it makes initial
   # experimentation and setup a bit tricky.  For example, if you do not
